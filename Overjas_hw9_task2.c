@@ -21,6 +21,8 @@
 int main(int argc, char *argv[])
 {
 	FILE *inFile;
+	int i, count = 0;
+//	double avg;
 	inFile = fopen("zone1.txt", "r");
 	if(inFile == NULL)
 	{
@@ -28,7 +30,13 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 	printf("The file was opened.\n");
-//	while(fscanf(infile, "%d", &d[count]) != EOF)
+	while(fscanf(inFile, "%d", &i) != EOF)
+	{
+		printf("scanning %d\n", i);
+		count++;
+	}
+//.	avg = avg/(count * 1.0);
+//	printf("Avg is %5.2f\n", avg);
 
 
 	return 0;
