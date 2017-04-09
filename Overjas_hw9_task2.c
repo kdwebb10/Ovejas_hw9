@@ -15,6 +15,8 @@
 #include <stdlib.h>		/* Standard Library */
 #include <math.h>		/* Math Libarary compile with -lm */
 
+#define ROWS 4
+#define COLUMNS 2
 /* Function Prototypes */
 
 /* Main Program */
@@ -35,15 +37,11 @@ int main(int argc, char *argv[])
 		{
 			for(c = 0; c < COLUMNS; c++)
 			{
-				fcanf(inFile, "%d", &rcValue[r][c]);
+				fscanf(inFile, "%d", &rcValue[r][c]);
 			}
 		}
 	}
-	
+
 	return 0;
 }
-
-
 /* Function Defenitions */
-
-
