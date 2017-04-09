@@ -21,24 +21,25 @@
 int main(int argc, char *argv[])
 {
 	FILE *inFile;
-	int i, count = 0;
-//	double avg;
+	int rcValue [ROWS][COLUMNS];
+	int r, c;
 	inFile = fopen("zone1.txt", "r");
 	if(inFile == NULL)
 	{
 		printf("The file was not opened.\n");
 		exit(1);
 	}
-	printf("The file was opened.\n");
-	while(fscanf(inFile, "%d", &i) != EOF)
+	else
 	{
-		printf("scanning %d\n", i);
-		count++;
+		for(r = 0; r < ROWS; r++)
+		{
+			for(c = 0; c < COLUMNS; c++)
+			{
+				fcanf(inFile, "%d", &rcValue[r][c]);
+			}
+		}
 	}
-//.	avg = avg/(count * 1.0);
-//	printf("Avg is %5.2f\n", avg);
-
-
+	
 	return 0;
 }
 
